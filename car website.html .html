@@ -1,0 +1,71 @@
+<!DOCTYBE HTML>
+<html>
+  <head>
+    <style>
+      body {
+        background-color: #fff8dc;
+        color: brown;
+        text-align: center;
+      }
+      input {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        border: 1px solid brown;
+        border-radius: 50px;
+      }
+      button {
+        background-color: brown;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        border-radius: 50px;
+      }
+      button:hover {
+        opacity: 0.8;
+      }
+      .container {
+        margin: 20px 20%;
+        border: brown solid;
+        border-radius: 30px;
+        padding: 30px;
+        display: flex;
+      }
+    </style>
+    <title>HOME-PAGE</title>
+  </head>
+  <body>
+    <h1>
+      Cars Shop
+    </h1>
+    <div class="container">
+      <div style="padding: 20px;">
+        <a href="https://www.google.com">
+          <img src="CarShop-Bristol-Nov-2019.jpg" width="550" height="450" />
+        </a>
+        <h3 id="time"></h3>
+      </div>
+      <div style="padding: 5px;">
+        <button
+          type="button"
+          onclick="document.getElementById('time').innerHTML = Date()"
+        >
+          Click me to display Date and Time.
+        </button>
+
+        <button onclick="window.print()">Print this page</button>
+        <a href="cars.html">
+          <button>
+            Cars
+          </button>
+        </a>
+
+        <a href="feedback.html"> <button>Give us feedback</button> </a>
+        <a href="Login.html"> <button>Login</button> </a>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYBE HTML>
+<html>
+  <head>
+    <title>cars</title>
+    <style>
+      table {
+        border: 1px solid brown;
+        border-radius: 50px;
+        padding: 15px;
+        width: 100%;
+
+      }
+      th,
+      td {
+        padding: 0px;
+        text-align: center;
+      }
+      body {
+        background-color: cornsilk;
+        color: brown;
+        text-align: center;
+      }
+
+      input {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        border: 1px solid brown;
+        box-sizing: border-box;
+        border-radius: 50px;
+      }
+      button {
+        background-color: brown;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        border-radius: 50px;
+      }
+      button:hover {
+        opacity: 0.8;
+      }
+      .container {
+        margin: 20px 20%;
+        border: brown solid;
+        border-radius: 30px;
+        padding: 30px;
+      }
+     
+    </style>
+    <script>
+      function validateForm() {
+        var x = document.forms["myForm"]["fname"].value;
+        if (x == "") {
+          alert("Name must be filled out");
+          return false;
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Cars Shop</h1>
+    <img src="cars2.jpg" />
+    <div class="container">
+      <p id="price" style="display: none;">2500$</p>
+      <button
+        type="button"
+        onclick="document.getElementById('price').style.display='block'"
+      >
+        PRICE
+      </button>
+      <p>Fill The Required Information</p>
+      <br />
+      <form name="myForm" action="" onsubmit=" validateForm()" method="post">
+        <table>
+          <tr>
+            <th>Name</th>
+            <th><input type="text" name="fname" /></th>
+          </tr>
+          <tr>
+            <td>Last name</td>
+            <td><input type="text" name="last name" /></td>
+          </tr>
+          <tr>
+            <td>Phone number</td>
+            <td><input type="text" name="phone number" /></td>
+          </tr>
+          <tr>
+            <td>E-mail</td>
+            <td><input type="text" name="Email" /></td>
+          </tr>
+        </table>
+        <br />
+        <p>Gander:</p>
+        <select name="Gander">
+          <option value="male">Male</option>
+          <option value="Female">Female</option>
+        </select>
+        <br />
+        <input type="submit" value="submit" />
+      </form>
+      <button onclick="window.print()">Print this page</button>
+    </div>
+  </body>
+</html>
